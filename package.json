@@ -9,9 +9,10 @@
   "scripts": {
     "build:ui": "yarn run clean:ui && yarn run prep:ui && node_modules/.bin/webpack-cli --mode development",
     "clean:ui": "rm -rf build",
+    "heroku-postbuild": "yarn run build:ui",
     "prep:ui": "mkdir build && cp -r client/styles/* build",
     "server": "cd server && node index",
-    "start": "yarn run build:ui && yarn run server"
+    "start": "yarn run server"
   },
   "babel": {
     "presets": [
