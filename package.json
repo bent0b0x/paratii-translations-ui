@@ -1,0 +1,9 @@
+{
+  "name": "paratii-translations-ui",
+  "version": "1.0.0",
+  "description": "Webapp to trigger translation pulls from translation service to paratii github",
+  "main": "index.js",
+  "author": "bent0b0x",
+  "license": "MIT",
+  "private": false
+}
