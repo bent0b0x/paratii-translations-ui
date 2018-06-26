@@ -2,11 +2,35 @@
   "name": "paratii-translations-ui",
   "version": "1.0.0",
   "description": "Webapp to trigger translation pulls from translation service to paratii github",
-  "main": "index.js",
+  "main": "server.js",
   "author": "bent0b0x",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "build:ui": "yarn run clean:ui && yarn run prep:ui && webpack-cli --mode development",
+    "clean:ui": "rm -rf build",
+    "prep:ui": "mkdir build && cp -r client/styles/* build",
+    "server": "cd server && node index"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  },
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "node-fetch": "^2.1.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.12.1",
+    "webpack-cli": "^3.0.8"
   }
 }
