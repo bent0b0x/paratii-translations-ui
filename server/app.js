@@ -24,8 +24,9 @@ app.get('/', (req, res) => {
 })
 
 app.get('/pull', (req, res) => {
-  fetch('https://poeditor.com/api/webhooks/github?api_token=' + GITHUB_API_TOKEN + '&id_project=' + PROJECT_ID + '&language=pt-br&operation=export_terms_and_translations=1')
-    .then(() => {
+  fetch('https://poeditor.com/api/webhooks/github?api_token=' + GITHUB_API_TOKEN + '&id_project=' + PROJECT_ID + '&language=pt-br&operation=export_terms_and_translations')
+    .then((val) => {
+      console.log('val: ', val)
       res.status(200).send()
     })
     .catch(() => {
