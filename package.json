@@ -5,5 +5,8 @@
   "main": "index.js",
   "author": "bent0b0x",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
