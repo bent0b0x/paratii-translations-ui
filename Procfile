@@ -1,1 +1,1 @@
-web: yarn run build:ui && yarn run server
+web: yarn run start

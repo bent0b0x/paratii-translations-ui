@@ -10,7 +10,8 @@
     "build:ui": "yarn run clean:ui && yarn run prep:ui && webpack-cli --mode development",
     "clean:ui": "rm -rf build",
     "prep:ui": "mkdir build && cp -r client/styles/* build",
-    "server": "cd server && node index"
+    "server": "cd server && node index",
+    "start": "yarn run build:ui && yarn run server"
   },
   "babel": {
     "presets": [
